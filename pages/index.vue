@@ -1,8 +1,13 @@
 <template>
-  <h1 class="pl-24 pt-12 text-3xl text-red-600 underline">
-    this is index page
-  </h1>
-  <button class="btn">Hello daisyUI</button>
+  <div class="bg-gradient-to-br from-primary to-secondary(style='margin-top: -65px;')">
+    <div class="min-h-screen pt-16 overflow-hidden hero text-primary-content">
+      <div class="flex-col justify-between w-full max-w-6xl mt-10 mb-48 hero-content">
+        <h1 class="py-4 mb-2 font-extrabold text-center font-title lg">
+          <div class="mb-3 text-5xl lg">Portfolio</div>
+        </h1>
+      </div>
+    </div>
+  </div>
 
 
 </template>
