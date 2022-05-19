@@ -4,7 +4,7 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   ssr:false,
   app: {
-    cdnURL: '/portfolio/'
+    baseURL: '/portfolio/'
   },
   css: ["@/assets/styles/tailwind.css"],
   build: {
