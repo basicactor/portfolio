@@ -1,9 +1,9 @@
-<script setup lg="ts">
+<!-- <script setup lang="ts">
 import Header from './components/Header.vue'
 
-</script>
+</script> -->
 <template>
-  <Header />
+  <!-- <Header /> -->
   <div>
     <NuxtPage />
   </div>
