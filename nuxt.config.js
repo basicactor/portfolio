@@ -4,10 +4,10 @@ import { defineNuxtConfig } from "nuxt";
 export default defineNuxtConfig({
   target: "static",
   ssr: false,
-  app: {
-    baseURL: "/portfolio/",
-    buildAssetsDir: "nuxt",
-  },
+  // app: {
+  //   baseURL: "/portfolio/",
+  //   buildAssetsDir: "nuxt",
+  // },
   css: ["@/assets/styles/tailwind.css"],
   build: {
     postcss: {
