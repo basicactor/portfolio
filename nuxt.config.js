@@ -1,11 +1,11 @@
-import { defineNuxtConfig } from 'nuxt'
+import { defineNuxtConfig } from "nuxt";
 
 //https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  ssr:false,
-  buildAssetsDir: '/nuxt/',
+  ssr: false,
+  buildDir: "docs",
   app: {
-    baseURL: '/portfolio/'
+    baseURL: "/portfolio/",
   },
   css: ["@/assets/styles/tailwind.css"],
   build: {
@@ -17,4 +17,4 @@ export default defineNuxtConfig({
       },
     },
   },
-})
+});
