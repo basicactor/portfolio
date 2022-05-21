@@ -20,7 +20,8 @@ const skills: Array<Skill> = [
 
 
 const convertImgSrc = (fileName: string): string => {
-  return `../assets/images/${fileName}.png`
+  return new URL(`../assets/images/${fileName}.png`, import.meta.url).href
+
 
   // return new URL(src, import.meta.url).href
 }
