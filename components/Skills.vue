@@ -18,9 +18,11 @@ const skills: Array<Skill> = [
   { name: "jQuery", detail: "実務経験3年" },
 ]
 
-const convertImgSrc = (src: string): string => {
-  // console.log("require", require(src))
-  return new URL(src, import.meta.url).href
+
+const convertImgSrc = (fileName: string): string => {
+  return `../assets/images/${fileName}.png`
+
+  // return new URL(src, import.meta.url).href
 }
 </script>
   
@@ -35,8 +37,9 @@ const convertImgSrc = (src: string): string => {
             <template #title>{{ skill.name }}</template>
             <template #body>{{ skill.detail }}</template>
             <template #img>
-              <img :src="convertImgSrc(`../assets/images/${skill.name.toLowerCase()}.png`)" class="w-16 p-2"
-                :alt="skill.name">
+              <!-- <img :src="convertImgSrc(`../assets/images/${skill.name.toLowerCase()}.png`)" class="w-16 p-2"
+                :alt="skill.name"> -->
+              <img :src="convertImgSrc(`${skill.name.toLowerCase()}`)" class="w-16 p-2" :alt="skill.name">
             </template>
           </Card>
         </template>
