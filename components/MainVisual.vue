@@ -18,14 +18,14 @@
         </div>
         <h1 class="text-5xl font-bold">basicactor</h1>
         <p class="text-lg ">Front-end Engineer</p>
-        <div class="sns-icons flex-auto pt-8 text-center">
-          <button class="avatar tooltip mr-3" data-tip="GitHub">
+        <div class="sns-icons flex-auto pt-8 text-center space-x-7">
+          <button class="avatar tooltip" data-tip="GitHub">
             <div class="w-7 rounded-full">
               <a href="https://github.com/basicactor" target="_blank" rel="noopener">
                 <img src="@/assets/images/github-icon.png" /></a>
             </div>
           </button>
-          <button class="avatar tooltip mr-3" data-tip="Zenn">
+          <button class="avatar tooltip" data-tip="Zenn">
             <div class="w-7 rounded-full">
               <a href="https://zenn.dev/one_dock" target="_blank" rel="noopener">
                 <img src="@/assets/images/zenn-logo.png" />

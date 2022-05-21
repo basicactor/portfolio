@@ -10,15 +10,6 @@ import Skills from "@/components/Skills.vue"
   <Skills />
   <Works />
 
-  <div>
-    ・プロフィール
-    ・プロジェクト経歴 / 職務経歴
-    ・スキルセット
-    ・作品
-    ・GitHubアカウント
-    ・Qiita、Zenn、Mediumアカウント
-  </div>
-
 
 
 
