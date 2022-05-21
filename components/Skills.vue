@@ -40,7 +40,7 @@ const convertImgSrc = (fileName: string): string => {
             <template #img>
               <!-- <img :src="convertImgSrc(`../assets/images/${skill.name.toLowerCase()}.png`)" class="w-16 p-2"
                 :alt="skill.name"> -->
-              <img :src="convertImgSrc(`${skill.name.toLowerCase()}`)" class="w-16 p-2" :alt="skill.name">
+              <img :src="convertImgSrc(skill.name.toLowerCase())" class="w-16 p-2" :alt="skill.name">
             </template>
           </Card>
         </template>
