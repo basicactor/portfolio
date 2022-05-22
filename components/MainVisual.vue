@@ -3,16 +3,7 @@ import ScrollBtn from "@/components/ScrollBtn.vue"
 </script>
   
   <template>
-  <!-- <div class="bg-white">
-    <div class="min-h-screen pt-16 overflow-hidden hero text-primary-content">
-      <div class="flex-col justify-between w-full max-w-6xl mt-10 mb-48 hero-content">
-        <h1 class="py-4 mb-2 font-extrabold text-center font-title lg">
-          <div class="mb-3 text-5xl lg">Portfolio</div>
-        </h1>
-      </div>
-    </div>
-  </div> -->
-  <div class="hero min-h-screen bg-base-200">
+  <div class="hero min-h-screen bg-base-200 relative">
     <div class="hero-content text-center">
       <div class="max-w-lg">
         <div class="avatar">
@@ -52,11 +43,7 @@ import ScrollBtn from "@/components/ScrollBtn.vue"
           <a href="#skills" class="link text-4xl font-bold link-hover mr-12">Skills</a>
           <a href="#works" class="link text-4xl font-bold link-hover ">Works</a>
         </div> -->
-
-        <ScrollBtn section="#jobs" />
-
-
-
+        <ScrollBtn class="absolute bottom-0 right-0 left-0 mx-auto" pageTitle="Job Experience" />
       </div>
     </div>
   </div>

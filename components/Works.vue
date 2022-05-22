@@ -1,6 +1,8 @@
 
 <script setup lang="ts">
-import Card from "@/components/Card.vue"
+import Card from "./Card.vue"
+import SectionWrapper from "./SectionWrapper.vue"
+
 
 interface Work {
   title: string
@@ -16,21 +18,20 @@ const works: Array<Work> = [
 </script>
 
 <template>
-  <div id="works" class="hero min-h-screen bg-base-100 px-16">
-    <div class="text-center">
-      <div class="mx-w-md">
-        <h1 class="text-5xl font-bold mb-20">Works</h1>
-        <div class="grid grid-cols-3 gap-10">
-          <template v-for="work in works">
+  <SectionWrapper bgColor="bg-base-100">
+    <template #title>Works</template>
+    <template #content>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
-            <Card :badges="work.badges">
-              <template #title>{{ work.title }}</template>
-              <template #body>{{ work.detail }}</template>
-              <template #img> <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></template>
-            </Card>
-          </template>
-        </div>
+        <template v-for="work in works">
+          <Card :badges="work.badges">
+            <template #title>{{ work.title }}</template>
+            <template #body>{{ work.detail }}</template>
+            <template #img> <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></template>
+          </Card>
+        </template>
       </div>
-    </div>
-  </div>
+    </template>
+
+  </SectionWrapper>
 </template>

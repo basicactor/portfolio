@@ -3,7 +3,7 @@ import SectionWrapper from './SectionWrapper.vue';
 </script>
 
 <template>
-  <SectionWrapper>
+  <SectionWrapper bgColor="bg-base-200">
     <template #title>Contact</template>
     <template #content>TwitterでDMください</template>
 
