@@ -21,7 +21,7 @@ const works: Array<Work> = [
   <SectionWrapper bgColor="bg-base-100">
     <template #title>Works</template>
     <template #content>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
         <template v-for="work in works">
           <Card :badges="work.badges">
