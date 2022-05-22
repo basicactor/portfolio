@@ -13,7 +13,12 @@ export default defineNuxtConfig({
   target: "static",
   ssr: false,
   app,
-  css: ["@/assets/styles/tailwind.css", "@/assets/styles/common.scss"],
+  css: [
+    "@/assets/styles/tailwind.css",
+    "@/assets/styles/common.scss",
+    "@fortawesome/fontawesome-svg-core/styles.css",
+  ],
+  plugins: ["@/plugins/fontawesome.ts"],
   build: {
     postcss: {
       postcssOptions: {

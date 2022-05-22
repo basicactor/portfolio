@@ -8,6 +8,9 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/vue-fontawesome": "^3.0.0-5",
     "nuxt": "3.0.0-rc.3",
     "push-dir": "^0.4.1",
     "sass": "^1.52.1",
