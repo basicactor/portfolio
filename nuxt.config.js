@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   //   baseURL: "/portfolio/",
   //   buildAssetsDir: "nuxt",
   // },
-  css: ["@/assets/styles/tailwind.css"],
+  css: ["@/assets/styles/tailwind.css", "@/assets/styles/common.scss"],
   build: {
     postcss: {
       postcssOptions: {

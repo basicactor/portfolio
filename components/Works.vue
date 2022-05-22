@@ -16,11 +16,11 @@ const works: Array<Work> = [
 </script>
 
 <template>
-  <div id="works" class="hero min-h-screen bg-base-100">
+  <div id="works" class="hero min-h-screen bg-base-100 px-16">
     <div class="text-center">
-      <div class="">
+      <div class="mx-w-md">
         <h1 class="text-5xl font-bold mb-20">Works</h1>
-        <div class="flex flex-row flex-wrap space-x-10">
+        <div class="grid grid-cols-3 gap-10">
           <template v-for="work in works">
 
             <Card :badges="work.badges">
