@@ -5,25 +5,23 @@ import SectionWrapper from "./SectionWrapper.vue"
 import { convertImgSrc } from "@/utilities/tools"
 
 
-interface Skill {
+const skills: Array<{
   name: string
   exp: string
   isWorkExp: boolean
   detail: string
   fileName?: string
-}
-
-const skills: Array<Skill> = [
-  { name: "Vue.js", exp: "2年", isWorkExp: true, detail: "Vue2 + composition-api + typescriptを利用しwebアプリを開発" },
-  { name: "Nuxt.js", exp: "1ヵ月", isWorkExp: false, detail: "ポートフォリオ作成時にNuxt3を使用。" },
-  { name: "javaScript", exp: "2年", isWorkExp: true, detail: "実務ではVue.jsの利用経験あり。個人開発ではNode.js(express)の経験あり" },
-  { name: "CSS", exp: "2年", isWorkExp: true, detail: "主にSCSSを利用。VuetifyやtailwindcssなどのUIフレームワークを使うことが多い。" },
-  { name: "HTML", exp: "2年", isWorkExp: true, detail: "" },
-  { name: "C#", exp: "1年", isWorkExp: true, fileName: "csharp", detail: "Webアプリサーバーのバグ修正、メール送信バッチプログラムの開発時に利用" },
-  { name: "Azure", exp: "2年", isWorkExp: true, detail: "Azure web apps（Webアプリ用SaaS）、Azure DevOps（アジャイル開発管理）、Azure functions(バッチ）の実務利用経験あり。" },
-  { name: "TypeScript", exp: "1年", isWorkExp: true, detail: "vue2と一緒に利用。" },
-  { name: "Git", exp: "2年", isWorkExp: true, fileName: "github-icon", detail: "4～6人チームでの利用あり" },
-]
+}> = [
+    { name: "Vue.js", exp: "2年", isWorkExp: true, detail: "Vue2 + composition-api + typescriptを利用しwebアプリを開発" },
+    { name: "Nuxt.js", exp: "1ヵ月", isWorkExp: false, detail: "ポートフォリオ作成時にNuxt3を使用。" },
+    { name: "javaScript", exp: "2年", isWorkExp: true, detail: "実務ではVue.jsの利用経験あり。個人開発ではNode.js(express)の経験あり" },
+    { name: "CSS", exp: "2年", isWorkExp: true, detail: "主にSCSSを利用。VuetifyやtailwindcssなどのUIフレームワークを使うことが多い。" },
+    { name: "HTML", exp: "2年", isWorkExp: true, detail: "" },
+    { name: "C#", exp: "1年", isWorkExp: true, fileName: "csharp", detail: "Webアプリサーバーのバグ修正、メール送信バッチプログラムの開発時に利用" },
+    { name: "Azure", exp: "2年", isWorkExp: true, detail: "Azure web apps（Webアプリ用SaaS）、Azure DevOps（アジャイル開発管理）、Azure functions(バッチ）の実務利用経験あり。" },
+    { name: "TypeScript", exp: "1年", isWorkExp: true, detail: "vue2と一緒に利用。" },
+    { name: "Git", exp: "2年", isWorkExp: true, fileName: "github-icon", detail: "4～6人チームでの利用あり" },
+  ]
 
 </script>
   <template>
