@@ -16,7 +16,7 @@ const socialMedias: Array<socialMedia> =
 </script>
   
   <template>
-  <div class="hero min-h-screen bg-base-200 relative">
+  <div class="hero min-h-screen bg-stone-200 relative">
     <div class="hero-content text-center">
       <div class="max-w-lg">
         <div class="avatar">
@@ -39,7 +39,7 @@ const socialMedias: Array<socialMedia> =
         <div class="w-64 text-left">
           <p class="pt-6">大学院卒業後、独立系SIer企業に就職。自社サービス開発プロジェクトのメンバーとして主にWebアプリのフロントエンド実装を担当。</p>
         </div>
-        <ScrollBtn class="absolute bottom-0 right-0 left-0 mx-auto" pageTitle="Job Experience" />
+        <ScrollBtn class="absolute bottom-0 right-0 left-0 mx-auto" />
       </div>
     </div>
   </div>

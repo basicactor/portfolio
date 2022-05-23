@@ -24,7 +24,7 @@ const tableItems: Array<{
 </script>
 
 <template>
-  <SectionWrapper bgColor="bg-slate-100">
+  <SectionWrapper bgColor="bg-slate-50">
     <template #title>Job Experience</template>
     <template #content>
       <div class="grid grid-cols-1">
