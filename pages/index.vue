@@ -10,12 +10,20 @@ import Contact from "@/components/Contact.vue"
 </script>
 <template>
   <Header />
-  <main class="snap-y snap-mandatory h-screen w-screen overflow-scroll scroll-smooth">
+  <!-- <main class="snap-y snap-mandatory h-screen w-screen overflow-scroll scroll-smooth">
     <MainVisual id="top" class="snap-start" />
     <Jobs id="jobs" class="snap-start" />
     <Skills id="skills" class="snap-start" />
     <Works id="works" class="snap-start" />
     <Contact id="contact" class="snap-start" />
+  </main> -->
+
+  <main class="h-screen w-screen scroll-smooth">
+    <MainVisual id="top" />
+    <Jobs id="jobs" />
+    <Skills id="skills" />
+    <Works id="works" />
+    <Contact id="contact" />
   </main>
 
 
