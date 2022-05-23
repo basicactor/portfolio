@@ -2,6 +2,8 @@
 <script setup lang="ts">
 import Card from "./Card.vue"
 import SectionWrapper from "./SectionWrapper.vue"
+import { convertImgSrc } from "@/utilities/tools"
+
 
 interface Skill {
   name: string
@@ -23,10 +25,6 @@ const skills: Array<Skill> = [
   { name: "Git", exp: "2年", isWorkExp: true, fileName: "github-icon", detail: "4～6人チームでの利用あり" },
 ]
 
-
-const convertImgSrc = (fileName: string): string => {
-  return new URL(`../assets/images/${fileName}.png`, import.meta.url).href
-}
 </script>
   <template>
   <SectionWrapper bgColor="bg-base-200">

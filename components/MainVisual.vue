@@ -1,5 +1,18 @@
   <script setup lang="ts">
 import ScrollBtn from "@/components/ScrollBtn.vue"
+import { convertImgSrc } from "@/utilities/tools"
+
+interface socialMedia {
+  tooltip: string
+  url: string
+  imgName: string
+}
+const socialMedias: Array<socialMedia> =
+  [
+    { tooltip: "GitHub", url: "https://github.com/basicactor", imgName: "github-icon" },
+    { tooltip: "Zenn", url: "https://zenn.dev/one_dock", imgName: "zenn-logo" },
+    { tooltip: "Qiita", url: "https://qiita.com/basicactor", imgName: "qiita-icon" }
+  ]
 </script>
   
   <template>
@@ -14,35 +27,19 @@ import ScrollBtn from "@/components/ScrollBtn.vue"
         <h1 class="text-5xl font-bold">basicactor</h1>
         <p class="text-lg ">Front-end Engineer</p>
         <div class="sns-icons flex-auto pt-8 text-center space-x-7">
-          <button class="avatar tooltip" data-tip="GitHub">
-            <div class="w-7 rounded-full">
-              <a href="https://github.com/basicactor" target="_blank" rel="noopener">
-                <img src="@/assets/images/github-icon.png" /></a>
-            </div>
-          </button>
-          <button class="avatar tooltip" data-tip="Zenn">
-            <div class="w-7 rounded-full">
-              <a href="https://zenn.dev/one_dock" target="_blank" rel="noopener">
-                <img src="@/assets/images/zenn-logo.png" />
-              </a>
-            </div>
-          </button>
-          <button class="avatar tooltip" data-tip="Qiita">
-            <div class="w-7 rounded-full">
-              <a href="https://qiita.com/basicactor" target="_blank" rel="noopener">
-                <img src="@/assets/images/qiita-icon.png" />
-              </a>
-            </div>
-          </button>
+          <template v-for="media in socialMedias">
+            <button class="avatar tooltip" :data-tip="media.tooltip">
+              <div class="w-7 rounded-full">
+                <a :href="media.url" target="_blank" rel="noopener">
+                  <img :src="convertImgSrc(media.imgName)" /></a>
+              </div>
+            </button>
+          </template>
         </div>
-        <p class="pt-6">大学院卒業後、独立系SIer企業に就職。</p>
-        <p class="pb-6"> 自社サービス開発プロジェクトのメンバーとして主にWebアプリのフロントエンド実装を担当。</p>
-        <!-- <button class="btn btn-primary">Get Started</button> -->
-        <!-- <div class="nav flex-auto">
-          <a href="#jobs" class="link text-4xl font-bold link-hover mr-12">Jobs</a>
-          <a href="#skills" class="link text-4xl font-bold link-hover mr-12">Skills</a>
-          <a href="#works" class="link text-4xl font-bold link-hover ">Works</a>
-        </div> -->
+        <div class="px-116">
+          <p class="pt-6">大学院卒業後、独立系SIer企業に就職。</p>
+          <p class="pb-6"> 自社サービス開発プロジェクトのメンバーとして主にWebアプリのフロントエンド実装を担当。</p>
+        </div>
         <ScrollBtn class="absolute bottom-0 right-0 left-0 mx-auto" pageTitle="Job Experience" />
       </div>
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="card card-side bg-base-100 shadow-xl h-24 w-68">
+  <div class="card card-side bg-base-100 shadow-xl h-72 w-68">
     <figure>
       <slot name="figure" />
       <!-- <img src="https://api.lorem.space/image/movie?w=200&h=280" alt="Movie"> -->
