@@ -10,8 +10,6 @@ module.exports = {
     "./components/**/*.{vue,js,jsx,ts,tsx}",
     "./pages/**/*.{vue,js,jsx,ts,tsx}",
   ],
-  theme: {
-    extend: {},
-  },
+  darkMode: "class",
   plugins: [require("daisyui")],
 };
