@@ -17,7 +17,6 @@ import Contact from "@/components/Contact.vue"
     <Works id="works" class="snap-start" />
     <Contact id="contact" class="snap-start" />
   </main>
-  <footer class="w-screen text-center">Copyright@basicactor2022</footer>
 
 
 

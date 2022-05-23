@@ -1,6 +1,6 @@
   
 <script setup lang="ts">
-import Card from "./Card.vue"
+import CardSide from "./CardSide.vue"
 import SectionWrapper from "./SectionWrapper.vue"
 import { convertImgSrc } from "@/utilities/tools"
 
@@ -30,27 +30,20 @@ const skills: Array<Skill> = [
   <SectionWrapper bgColor="bg-base-200">
     <template #title>Skills</template>
     <template #content>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         <template v-for="skill in skills">
-          <Card>
-            <template #title>{{ skill.name }}</template>
-            <template #body>
-              <template v-if="skill.isWorkExp">
-                <div class="p-1 bg-emerald-700 rounded-lg text-sm text-white">
-                  実務経験：{{ skill.exp }}
-                </div>
-              </template>
-              <template v-else>
-                <div class="p-1 bg-yellow-200 rounded-lg text-sm">
-                  個人開発：{{ skill.exp }}
-                </div>
-              </template>
-              {{ skill.detail }}
-            </template>
-            <template #img>
-              <img :src="convertImgSrc(skill.fileName ?? skill.name.toLowerCase())" class="w-16 p-2" :alt="skill.name">
-            </template>
-          </Card>
+          <div class="card bg-base-100 shadow-md">
+            <div class="card-body p-6">
+              <img :src="convertImgSrc(skill.fileName ?? skill.name.toLowerCase())" class="w-10 mx-auto"
+                :alt="skill.name">
+              <h2 class="font-bold text-xl text-center">{{ skill.name }}</h2>
+              <hr>
+
+              <div v-if="skill.isWorkExp" class="badge badge-green-400 p-2 text-sm">業務経験 : {{ skill.exp }}</div>
+              <div v-else class="badge badge-orange-400 p-2 text-sm">個人開発 : {{ skill.exp }}</div>
+              <div class="text-left">{{ skill.detail }}</div>
+            </div>
+          </div>
         </template>
       </div>
     </template>

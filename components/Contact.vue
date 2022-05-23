@@ -8,9 +8,7 @@ import SectionWrapper from './SectionWrapper.vue';
     <template #content>
       <a class="w-12 inline-block" href="https://twitter.com/oneDock888"><img
           src="@/assets/images/twitter-icon.svg" /></a>
-      <a class="w-12 inline-block" href="mailto:nekohack888&#64;gmail.com"><img
-          src="@/assets/images/gmail-icon.svg" /></a>
-      <p>TwitterでDMください</p>
+      <p class="text-sm">TwitterでDMください</p>
     </template>
 
   </SectionWrapper>

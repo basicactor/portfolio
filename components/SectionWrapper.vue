@@ -7,7 +7,7 @@ const props = defineProps<{
 <template>
   <div class="hero min-h-screen" :class="props.bgColor">
     <div class="hero-content text-center">
-      <div class="max-w-lg">
+      <div class="max-w-4xl">
         <h1 class="text-5xl font-bold mb-5 text-center">
           <slot name="title" />
         </h1>
