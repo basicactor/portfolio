@@ -25,7 +25,7 @@ const skills: Array<{
 
 </script>
   <template>
-  <SectionWrapper bgColor="bg-stone-200">
+  <SectionWrapper :bgColor="['bg-stone-200', 'dark:bg-base-200']">
     <template #title>Skills</template>
     <template #content>
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

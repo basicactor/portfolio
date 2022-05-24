@@ -9,17 +9,21 @@ import Contact from "@/components/Contact.vue"
 
 </script>
 <template>
-  <Header />
-  <main class="w-screen scroll-smooth">
-    <MainVisual id="top" />
-    <Jobs id="jobs" />
-    <Skills id="skills" />
-    <Works id="works" />
-    <Contact id="contact" />
-  </main>
-  <footer>
-    <div class="w-full h-8 py-2 leading-4 bg-stone-100 text-center">Copyrights © 2022 basicactor</div>
-  </footer>
+  <div class="dark:text-gray-300">
+    <Header />
+    <main class="w-screen scroll-smooth">
+      <MainVisual id="top" />
+      <Jobs id="jobs" />
+      <Skills id="skills" />
+      <Works id="works" />
+      <Contact id="contact" />
+    </main>
+    <footer>
+      <div class="w-full h-8 py-2 leading-4 bg-stone-100 dark:bg-gray-700 text-center">
+        Copyrights © 2022 basicactor
+      </div>
+    </footer>
+  </div>
 
 
 </template>
