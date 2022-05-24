@@ -44,7 +44,7 @@ const socialMedias: Array<{
           </template>
         </div>
         <div class="w-64 text-left">
-          <p class="pt-6">大学院卒業後、独立系SIer企業に就職。自社サービス開発プロジェクトのメンバーとして主にWebアプリのフロントエンド実装を担当。</p>
+          <p class="pt-6 text-sm md:text-md">大学院卒業後、独立系SIer企業に就職。自社サービス開発プロジェクトのメンバーとして主にWebアプリのフロントエンド実装を担当。</p>
         </div>
         <ScrollBtn class="absolute bottom-0 right-0 left-0 mx-auto" />
       </div>

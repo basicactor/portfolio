@@ -48,7 +48,7 @@ const skills: Array<{
               <div v-else class="badge badge-orange-400 p-2 text-sm">個人開発 : {{ skill.exp }}</div>
             </template>
             <template #body>
-              {{ skill.detail }}
+              <div class="text-left">{{ skill.detail }}</div>
             </template>
           </Card>
         </template>

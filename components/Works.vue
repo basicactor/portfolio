@@ -29,7 +29,7 @@ const works: Array<{
             </template>
             <template #title>{{ work.title }}</template>
             <template #body>
-              <div>{{ work.detail }}</div>
+              <div class="text-left">{{ work.detail }}</div>
               <div v-if="work.srcCode"
                 class="btn bg-yellow-500 border-yellow-500 dark:bg-yellow-800 dark:border-yellow-800 mt-5">
                 <a :href="work.srcCode"
