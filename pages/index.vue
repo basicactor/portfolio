@@ -10,16 +10,18 @@ import Contact from "@/components/Contact.vue"
 </script>
 <template>
   <div class="dark:text-gray-300">
-    <Header />
+    <header>
+      <Header class="" />
+    </header>
     <main class="w-screen scroll-smooth">
-      <MainVisual id="top" />
-      <Jobs id="jobs" class="bg-stone-100 dark:bg-gray-800" />
-      <Skills id="skills" class="bg-stone-200 dark:bg-gray-900" />
-      <Works id="works" class="bg-stone-100 dark:bg-gray-800" />
-      <Contact id="contact" class="bg-stone-200 dark:bg-gray-900" />
+      <MainVisual id="top" class="bg-stone-100 dark:bg-[#03253c]" />
+      <Jobs id="jobs" class="bg-stone-200 dark:bg-gray-800" />
+      <Skills id="skills" class="bg-stone-100 dark:bg-gray-900" />
+      <Works id="works" class="bg-stone-200 dark:bg-gray-800" />
+      <Contact id="contact" class="bg-stone-100 dark:bg-gray-900" />
     </main>
     <footer>
-      <div class="w-full h-8 py-2 leading-4 bg-stone-100 dark:bg-gray-700 text-center">
+      <div class="w-full h-8 py-2 leading-4 bg-stone-100 dark:bg-gray-800 text-center">
         Copyrights © 2022 basicactor
       </div>
     </footer>

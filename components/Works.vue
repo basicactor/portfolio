@@ -13,7 +13,7 @@ const works: Array<{
   srcCode?: string
   img?: string, //画像ファイル名
 }> = [
-    { title: "This Portfolio Site", detail: "Nuxt3+Tailwindcssで作成しGitHub Pagesにて公開。レスポンシブ対応", badges: ['Nuxt.js v3.0', 'Vue.js v3.0', 'Tailwindcss v3.0', 'daisyui', 'TypeScrpit'], srcCode: "https://github.com/basicactor/portfolio", img: "portfolio" },
+    { title: "This Portfolio Site", detail: "Nuxt3+Tailwindcssで作成しGitHub Pagesにて公開。レスポンシブ/ダークモード対応", badges: ['Nuxt.js v3.0', 'Vue.js v3.0', 'Tailwindcss v3.0', 'daisyui', 'TypeScrpit'], srcCode: "https://github.com/basicactor/portfolio", img: "portfolio" },
   ]
 </script>
 

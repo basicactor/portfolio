@@ -1,22 +1,20 @@
 <script setup lang="ts">
 const navs: Array<string> = ["Top", "Jobs", "Skills", "Works", "Contact"]
 const isOpenSideBar = ref(false)
-
 </script>
-<template>
-  <header>
-    <nav class="fixed top-0 z-10 w-screen bg-stone-100 dark:bg-gray-700 h-14">
-      <ul class="invisible md:visible absolute right-4 flex flex-row space-x-10 p-4">
-        <template v-for="nav in navs">
-          <li><a :href='`#${nav.toLowerCase()}`'>{{ nav }}</a></li>
-        </template>
-      </ul>
-      <font-awesome-icon class=" visible md:invisible p-4 absolute right-0 top-0" icon="bars" size="lg"
-        @click="() => isOpenSideBar = true" />
-    </nav>
-  </header>
 
-  <div v-if="isOpenSideBar" class="fixed right-0 top-0 z-10 h-screen w-1/2 bg-white">
+<template>
+  <nav class="fixed top-0 z-10 w-screen h-14 bg-stone-100 dark:bg-gray-800">
+    <ul class="invisible md:visible absolute right-4 flex flex-row space-x-10 p-4">
+      <template v-for="nav in navs">
+        <li><a :href='`#${nav.toLowerCase()}`'>{{ nav }}</a></li>
+      </template>
+    </ul>
+    <font-awesome-icon class=" visible md:invisible p-4 absolute right-0 top-0" icon="bars" size="lg"
+      @click="() => isOpenSideBar = true" />
+  </nav>
+
+  <div v-if="isOpenSideBar" class="fixed right-0 top-0 z-10 h-screen w-1/2 bg-stone-50 dark:bg-gray-600">
     <font-awesome-icon class="p-4 absolute right-0 top-0" icon="xmark" size="lg" @click="() => isOpenSideBar = false" />
 
     <ul class="p-4">

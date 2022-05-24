@@ -20,7 +20,7 @@ const socialMedias: Array<{
 </script>
   
   <template>
-  <div class="hero min-h-screen bg-stone-200 dark:bg-[#03253c] relative">
+  <div class="hero min-h-screen relative">
     <div class="hero-content text-center">
       <div class="max-w-lg">
         <div class="avatar">

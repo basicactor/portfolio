@@ -44,8 +44,12 @@ const skills: Array<{
             </template>
             <template #title>{{ skill.name }}</template>
             <template #customBadges>
-              <div v-if="skill.isWorkExp" class="badge badge-green-400 p-2 text-sm">業務経験 : {{ skill.exp }}</div>
-              <div v-else class="badge badge-orange-400 p-2 text-sm">個人開発 : {{ skill.exp }}</div>
+              <div v-if="skill.isWorkExp"
+                class="badge badge-green-400 p-2 text-sm dark:bg-green-900 dark:border-green-900 dark:text-gray-300">
+                業務経験 : {{ skill.exp }}</div>
+              <div v-else
+                class="badge badge-orange-400 p-2 text-sm dark:bg-green-900 dark:border-green-900 dark:text-gray-300">
+                個人開発 : {{ skill.exp }}</div>
             </template>
             <template #body>
               <div class="text-left">{{ skill.detail }}</div>

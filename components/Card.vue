@@ -21,7 +21,7 @@ const { badges, size, hasSubtitle } = defineProps<{
       <template v-if="badges">
         <div>
           <template v-for="badge in badges">
-            <span class="badge mx-1">{{ badge }}</span>
+            <span class="badge mx-1 dark:bg-green-900 dark:border-green-900 dark:text-gray-300">{{ badge }}</span>
           </template>
         </div>
       </template>

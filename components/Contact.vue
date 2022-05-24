@@ -10,7 +10,6 @@ import SectionWrapper from './SectionWrapper.vue';
           alt="twitter" /></a>
       <p class="text-sm md:text-md mt-3">DMにてご連絡頂けたら幸いです。</p>
     </template>
-
   </SectionWrapper>
 
 </template>
