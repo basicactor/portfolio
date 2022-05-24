@@ -8,7 +8,7 @@ const { badges, size, hasSubtitle } = defineProps<{
 </script>
 
 <template>
-  <div :class='`card w-${size ?? 72} bg-base-100 dark:bg-[#333232] shadow-md`'>
+  <div :class='`card w-${size ?? 72} bg-base-100 dark:bg-[#252525] shadow-md`'>
     <div class="card-body p-6">
       <slot name="img" />
       <h2 class="font-bold text-lg md:text-xl text-center">
