@@ -1,26 +1,30 @@
   
 <script setup lang="ts">
-import CardSide from "./CardSide.vue"
 import SectionWrapper from "./SectionWrapper.vue"
 import { convertImgSrc } from "@/utilities/tools"
+
+const isDarkMode = computed(() => localStorage.theme === 'dark'
+  || (!('theme' in localStorage)
+    && window.matchMedia('(prefers-color-scheme: dark)').matches))
 
 
 const skills: Array<{
   name: string
   exp: string
   isWorkExp: boolean
+  img?: string //画像ファイル名
+  darkModeIcon?: string
   detail: string
-  fileName?: string
 }> = [
     { name: "Vue.js", exp: "2年", isWorkExp: true, detail: "Vue2 + composition-api + typescriptを利用しwebアプリを開発。" },
     { name: "Nuxt.js", exp: "1ヵ月", isWorkExp: false, detail: "ポートフォリオ作成時にNuxt3を使用。" },
     { name: "javaScript", exp: "2年", isWorkExp: true, detail: "実務ではVue.jsの利用経験あり。個人開発ではNode.js(express)の経験あり。" },
     { name: "CSS", exp: "2年", isWorkExp: true, detail: "主にSCSSを利用。VuetifyやtailwindcssなどのUIフレームワークを使うことが多い。" },
     { name: "HTML", exp: "2年", isWorkExp: true, detail: "vue.jsフレームワーク内で使用。" },
-    { name: "C#", exp: "1年", isWorkExp: true, fileName: "csharp", detail: "Webアプリサーバーのバグ修正、メール送信バッチプログラムの開発時に経験。" },
+    { name: "C#", exp: "1年", isWorkExp: true, img: "csharp", detail: "Webアプリサーバーのバグ修正、メール送信バッチプログラムの開発時に経験。" },
     { name: "Azure", exp: "2年", isWorkExp: true, detail: "Azure web apps、Azure DevOps、Azure functionsの実務経験あり。" },
     { name: "TypeScript", exp: "1年", isWorkExp: true, detail: "Vue.jsと合わせて実務経験あり。" },
-    { name: "Git", exp: "2年", isWorkExp: true, fileName: "github-icon", detail: "4～6人チームでの利用あり。" },
+    { name: "Git", exp: "2年", isWorkExp: true, img: "github-icon", darkModeIcon: "github-icon-dark", detail: "4～6人チームでの利用あり。" },
   ]
 
 </script>
@@ -32,7 +36,9 @@ const skills: Array<{
         <template v-for="skill in skills">
           <div class="card bg-base-100 shadow-md">
             <div class="card-body p-6">
-              <img :src="convertImgSrc(skill.fileName ?? skill.name.toLowerCase())" class="w-10 mx-auto"
+              <img v-if="isDarkMode && skill.darkModeIcon" :src="convertImgSrc(skill.darkModeIcon)" class="w-10 mx-auto"
+                :alt="skill.name">
+              <img v-else :src="convertImgSrc(skill.img ?? skill.name.toLowerCase())" class="w-10 mx-auto"
                 :alt="skill.name">
               <h2 class="font-bold text-xl text-center">{{ skill.name }}</h2>
               <hr>

@@ -2,16 +2,20 @@
 import ScrollBtn from "@/components/ScrollBtn.vue"
 import { convertImgSrc } from "@/utilities/tools"
 
-interface socialMedia {
+const isDarkMode = computed(() => localStorage.theme === 'dark'
+  || (!('theme' in localStorage)
+    && window.matchMedia('(prefers-color-scheme: dark)').matches))
+
+const socialMedias: Array<{
   tooltip: string
   url: string
-  imgName: string
-}
-const socialMedias: Array<socialMedia> =
+  img: string //画像ファイル名
+  darkModeIcon?: string
+}> =
   [
-    { tooltip: "GitHub", url: "https://github.com/basicactor", imgName: "github-icon" },
-    { tooltip: "Zenn", url: "https://zenn.dev/one_dock", imgName: "zenn-logo" },
-    { tooltip: "Qiita", url: "https://qiita.com/basicactor", imgName: "qiita-icon" }
+    { tooltip: "GitHub", url: "https://github.com/basicactor", img: "github-icon", darkModeIcon: "github-icon-dark" },
+    { tooltip: "Zenn", url: "https://zenn.dev/one_dock", img: "zenn-logo" },
+    { tooltip: "Qiita", url: "https://qiita.com/basicactor", img: "qiita-icon" }
   ]
 </script>
   
@@ -31,7 +35,17 @@ const socialMedias: Array<socialMedia> =
             <button class="avatar tooltip" :data-tip="media.tooltip">
               <div class="w-7 rounded-full">
                 <a :href="media.url" target="_blank" rel="noopener">
-                  <img :src="convertImgSrc(media.imgName)" /></a>
+                  <!-- <template v-if="isDarkMode">
+                    <img v-if="media.darkModeIcon" :src="convertImgSrc(media.darkModeIcon)" />
+                    <img v-else :src="convertImgSrc(media.img)" />
+                  </template>
+                  <template v-else>
+                    <img :src="convertImgSrc(media.img)" />
+                  </template> -->
+                  <img v-if="isDarkMode && media.darkModeIcon" :src="convertImgSrc(media.darkModeIcon)" />
+                  <img v-else :src="convertImgSrc(media.img)" />
+
+                </a>
               </div>
             </button>
           </template>

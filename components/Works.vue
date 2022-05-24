@@ -11,9 +11,9 @@ const works: Array<{
   detail: string
   badges: string[]
   srcCode?: string
-  fileName?: string,
+  img?: string, //画像ファイル名
 }> = [
-    { title: "This Portfolio Site", detail: "Nuxt3+Tailwindcssで作成しGitHub Pagesにて公開。レスポンシブ対応", badges: ['Nuxt.js v3.0', 'Vue.js v3.0', 'Tailwindcss v3.0', 'daisyui', 'TypeScrpit'], srcCode: "https://github.com/basicactor/portfolio", fileName: "portfolio" },
+    { title: "This Portfolio Site", detail: "Nuxt3+Tailwindcssで作成しGitHub Pagesにて公開。レスポンシブ対応", badges: ['Nuxt.js v3.0', 'Vue.js v3.0', 'Tailwindcss v3.0', 'daisyui', 'TypeScrpit'], srcCode: "https://github.com/basicactor/portfolio", img: "portfolio" },
   ]
 </script>
 
@@ -28,7 +28,7 @@ const works: Array<{
         <template v-for="work in works">
           <div class="card bg-base-100 shadow-md">
             <div class="card-body p-6">
-              <img :src="convertImgSrc(work.fileName)" class="w-20 md:w-40 mx-auto" :alt="work.fileName">
+              <img :src="convertImgSrc(work.img)" class="w-20 md:w-40 mx-auto" :alt="work.img">
               <h2 class="font-bold text-xl text-center">{{ work.title }}</h2>
               <hr>
               <div>
