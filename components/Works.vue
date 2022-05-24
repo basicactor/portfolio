@@ -22,22 +22,14 @@ const works: Array<{
     <template #title>Works</template>
     <template #content>
       <div class="grid grid-cols-1  gap-4">
-
-        <div></div>
-
         <template v-for="work in works">
-          <div class="card bg-base-100 shadow-md">
-            <div class="card-body p-6">
+          <Card :badges="work.badges">
+            <template #img>
               <img :src="convertImgSrc(work.img)" class="w-20 md:w-40 mx-auto" :alt="work.img">
-              <h2 class="font-bold text-xl text-center">{{ work.title }}</h2>
-              <hr>
-              <div>
-                <template v-for="badge in work.badges">
-                  <span class="badge mx-1">{{ badge }}</span>
-                </template>
-              </div>
-
-              <div class="text-left">{{ work.detail }}</div>
+            </template>
+            <template #title>{{ work.title }}</template>
+            <template #body>
+              <div>{{ work.detail }}</div>
               <div v-if="work.srcCode"
                 class="btn bg-yellow-500 border-yellow-500 dark:bg-yellow-800 dark:border-yellow-800 mt-5">
                 <a :href="work.srcCode"
@@ -45,8 +37,8 @@ const works: Array<{
                   ソースコード
                 </a>
               </div>
-            </div>
-          </div>
+            </template>
+          </Card>
         </template>
       </div>
     </template>

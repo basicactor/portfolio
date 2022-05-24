@@ -1,6 +1,7 @@
   
 <script setup lang="ts">
 import SectionWrapper from "./SectionWrapper.vue"
+import Card from "./Card.vue"
 import { convertImgSrc } from "@/utilities/tools"
 
 const isDarkMode = computed(() => localStorage.theme === 'dark'
@@ -34,20 +35,22 @@ const skills: Array<{
     <template #content>
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         <template v-for="skill in skills">
-          <div class="card bg-base-100 shadow-md">
-            <div class="card-body p-6">
+          <Card>
+            <template #img>
               <img v-if="isDarkMode && skill.darkModeIcon" :src="convertImgSrc(skill.darkModeIcon)" class="w-10 mx-auto"
                 :alt="skill.name">
               <img v-else :src="convertImgSrc(skill.img ?? skill.name.toLowerCase())" class="w-10 mx-auto"
                 :alt="skill.name">
-              <h2 class="font-bold text-xl text-center">{{ skill.name }}</h2>
-              <hr>
-
+            </template>
+            <template #title>{{ skill.name }}</template>
+            <template #customBadges>
               <div v-if="skill.isWorkExp" class="badge badge-green-400 p-2 text-sm">業務経験 : {{ skill.exp }}</div>
               <div v-else class="badge badge-orange-400 p-2 text-sm">個人開発 : {{ skill.exp }}</div>
-              <div class="text-left">{{ skill.detail }}</div>
-            </div>
-          </div>
+            </template>
+            <template #body>
+              {{ skill.detail }}
+            </template>
+          </Card>
         </template>
       </div>
     </template>

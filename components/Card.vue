@@ -1,31 +1,37 @@
 <script setup lang="ts">
 
-const { badges, size } = defineProps<{
+const { badges, size, hasSubtitle } = defineProps<{
   badges?: string[]
   size?: number
+  hasSubtitle?: boolean
 }>()
 </script>
 
 <template>
-  <div :class='`card w-${size ?? 72} bg-base-100 shadow-xl`'>
-    <figure>
+  <div :class='`card w-${size ?? 72} bg-base-100 shadow-md`'>
+    <div class="card-body p-6">
       <slot name="img" />
-    </figure>
-    <div class="card-body">
-      <h2 class="card-title">
+      <h2 class="font-bold text-xl text-center">
         <slot name="title" />
       </h2>
-      <p>
-        <slot name="body" />
+      <p v-if="hasSubtitle">
+        <slot name="subtitle" />
       </p>
-      <div class="card-actions justify-end">
-        <template v-if="badges">
-          <div v-for="badge in badges" class="badge bg-black p-3">
-            {{ badge }}
-          </div>
-        </template>
+      <hr>
+      <template v-if="badges">
+        <div>
+          <template v-for="badge in badges">
+            <span class="badge mx-1">{{ badge }}</span>
+          </template>
+        </div>
+      </template>
+      <slot name="customBadges" />
+      <div class="text-left">
+        <slot name="body" />
       </div>
     </div>
   </div>
+
+
 
 </template>

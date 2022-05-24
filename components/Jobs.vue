@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SectionWrapper from "./SectionWrapper.vue"
+import Card from "./Card.vue"
 
 const langs: Array<string> = [
   "vue 2.5+",
@@ -28,19 +29,11 @@ const tableItems: Array<{
     <template #title>Job Experience</template>
     <template #content>
       <div class="grid grid-cols-1">
+        <Card :badges="langs" hasSubtitle>
 
-        <div class="card bg-base-100 shadow-md">
-          <div class="card-body p-6">
-            <h2 class="font-bold text-xl text-center">独立系Sler企業</h2>
-            <p>2018.10 ~ 2021.7</p>
-            <hr>
-            <div>
-              <template v-for="lang in langs">
-                <span class="badge mx-1">{{ lang }}</span>
-              </template>
-
-            </div>
-
+          <template #title>独立系Sler企業</template>
+          <template #subTitle>2018.10 ~ 2021.7</template>
+          <template #body>
             <div class="text-left">
               <p class="mb-4">自社サービス開発プロジェクトのメンバーとして参加。主にフロントエンドを担当。</p>
               <h3 class="font-bold">携わったWebアプリの概要</h3>
@@ -64,8 +57,8 @@ const tableItems: Array<{
                 </template>
               </tbody>
             </table>
-          </div>
-        </div>
+          </template>
+        </Card>
       </div>
     </template>
   </SectionWrapper>

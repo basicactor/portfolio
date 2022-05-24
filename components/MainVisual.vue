@@ -35,13 +35,6 @@ const socialMedias: Array<{
             <button class="avatar tooltip" :data-tip="media.tooltip">
               <div class="w-7 rounded-full">
                 <a :href="media.url" target="_blank" rel="noopener">
-                  <!-- <template v-if="isDarkMode">
-                    <img v-if="media.darkModeIcon" :src="convertImgSrc(media.darkModeIcon)" />
-                    <img v-else :src="convertImgSrc(media.img)" />
-                  </template>
-                  <template v-else>
-                    <img :src="convertImgSrc(media.img)" />
-                  </template> -->
                   <img v-if="isDarkMode && media.darkModeIcon" :src="convertImgSrc(media.darkModeIcon)" />
                   <img v-else :src="convertImgSrc(media.img)" />
 
