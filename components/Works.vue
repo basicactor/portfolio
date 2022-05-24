@@ -18,7 +18,7 @@ const works: Array<{
 </script>
 
 <template>
-  <SectionWrapper :bgColor="['bg-stone-100', 'bg-gray-700']">
+  <SectionWrapper>
     <template #title>Works</template>
     <template #content>
       <div class="grid grid-cols-1  gap-4">

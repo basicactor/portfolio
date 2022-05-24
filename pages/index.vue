@@ -13,10 +13,10 @@ import Contact from "@/components/Contact.vue"
     <Header />
     <main class="w-screen scroll-smooth">
       <MainVisual id="top" />
-      <Jobs id="jobs" />
-      <Skills id="skills" />
-      <Works id="works" />
-      <Contact id="contact" />
+      <Jobs id="jobs" class="bg-stone-100 dark:bg-gray-800" />
+      <Skills id="skills" class="bg-stone-200 dark:bg-gray-900" />
+      <Works id="works" class="bg-stone-100 dark:bg-gray-800" />
+      <Contact id="contact" class="bg-stone-200 dark:bg-gray-900" />
     </main>
     <footer>
       <div class="w-full h-8 py-2 leading-4 bg-stone-100 dark:bg-gray-700 text-center">

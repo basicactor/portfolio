@@ -3,7 +3,7 @@ import SectionWrapper from './SectionWrapper.vue';
 </script>
 
 <template>
-  <SectionWrapper :bgColor="['bg-stone-200', 'bg-gray-800']">
+  <SectionWrapper>
     <template #title>Contact</template>
     <template #content>
       <a class=" w-12 inline-block" href="https://twitter.com/oneDock888"><img src="@/assets/images/twitter-icon.svg"
