@@ -5,7 +5,7 @@ const isOpenSideBar = ref(false)
 </script>
 <template>
   <header>
-    <nav class="fixed top-0 z-10 w-screen">
+    <nav class="fixed top-0 z-10 w-screen bg-stone-100 h-14">
       <ul class="invisible md:visible absolute right-4 flex flex-row space-x-10 p-4">
         <template v-for="nav in navs">
           <li><a :href='`#${nav.toLowerCase()}`'>{{ nav }}</a></li>

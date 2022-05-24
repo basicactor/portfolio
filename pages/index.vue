@@ -10,23 +10,16 @@ import Contact from "@/components/Contact.vue"
 </script>
 <template>
   <Header />
-  <!-- <main class="snap-y snap-mandatory h-screen w-screen overflow-scroll scroll-smooth">
-    <MainVisual id="top" class="snap-start" />
-    <Jobs id="jobs" class="snap-start" />
-    <Skills id="skills" class="snap-start" />
-    <Works id="works" class="snap-start" />
-    <Contact id="contact" class="snap-start" />
-  </main> -->
-
-  <main class="h-screen w-screen scroll-smooth">
+  <main class="w-screen scroll-smooth">
     <MainVisual id="top" />
     <Jobs id="jobs" />
     <Skills id="skills" />
     <Works id="works" />
     <Contact id="contact" />
   </main>
-
-
+  <footer>
+    <div class="w-full h-8 py-2 leading-4 bg-stone-100 text-center">Copyrights © 2022 basicactor</div>
+  </footer>
 
 
 </template>

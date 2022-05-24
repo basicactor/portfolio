@@ -6,9 +6,9 @@ import SectionWrapper from './SectionWrapper.vue';
   <SectionWrapper bgColor="bg-stone-200">
     <template #title>Contact</template>
     <template #content>
-      <a class="w-12 inline-block" href="https://twitter.com/oneDock888"><img
-          src="@/assets/images/twitter-icon.svg" /></a>
-      <p class="text-sm">TwitterでDMください</p>
+      <a class="w-12 inline-block" href="https://twitter.com/oneDock888"><img src="@/assets/images/twitter-icon.svg"
+          alt="twitter" /></a>
+      <p class="text-sm mt-3">DMにてご連絡頂けたら幸いです。</p>
     </template>
 
   </SectionWrapper>

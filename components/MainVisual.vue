@@ -16,7 +16,7 @@ const socialMedias: Array<socialMedia> =
 </script>
   
   <template>
-  <div class="hero min-h-screen bg-stone-200 relative">
+  <div class="hero min-h-screen bg-stone-200 dark:bg-blue-900 relative">
     <div class="hero-content text-center">
       <div class="max-w-lg">
         <div class="avatar">
