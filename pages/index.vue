@@ -11,7 +11,7 @@ import Contact from "@/components/Contact.vue"
 <template>
   <div class="dark:text-gray-300">
     <header>
-      <Header class="" />
+      <Header />
     </header>
     <main class="w-screen scroll-smooth">
       <MainVisual id="top" class="bg-stone-100 dark:bg-[#03253c]" />
