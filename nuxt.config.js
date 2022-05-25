@@ -1,22 +1,18 @@
 import { defineNuxtConfig } from "nuxt";
 
-const pathSettings =
-  process.env.NODE_ENV == "production"
-    ? {
-        baseURL: "/portfolio/",
-        buildAssetsDir: "nuxt",
-      }
-    : {};
+const isProduction = process.env.NODE_ENV == "production";
+
+const baseURL = isProduction ? "/portfolio/" : "";
+const buildAssetsDir = isProduction ? "/nuxt" : "";
+const href = isProduction ? "/basicactor/favicon.png" : "/favicon.png";
 
 //https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  // Headers of the page
-
   target: "static",
   ssr: false,
   app: {
-    // baseURL: "/portfolio/",
-    // buildAssetsDir: "nuxt",
+    baseURL,
+    buildAssetsDir,
     head: {
       title: "basicactor's Portfolio",
       meta: [
@@ -27,7 +23,7 @@ export default defineNuxtConfig({
         {
           rel: "icon",
           type: "image/png",
-          href: "/favicon.png",
+          href,
         },
       ],
     },
